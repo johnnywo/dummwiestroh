@@ -1,0 +1,79 @@
+body{
+    font-family: 'Schoolbell', cursive;
+    font-size: 170%;
+    padding-top: 110px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Amatica SC', cursive;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.navbar{
+    min-height: 110px;
+}
+
+.navbar-inverse {
+    background: url("/themes/dws/assets/images/menu-hg.png");
+
+    border: none;
+    font-family: 'Schoolbell', cursive;
+    font-size: 130%;
+}
+
+.navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after, .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
+    background: #e6e6e6;
+}
+
+.navbar-brand{
+    font-family: 'Amatica SC', cursive;
+    color: rgb(235, 235, 235) !important;
+    height: 110px;
+}
+
+.black{
+    color: rgb(62, 62, 62);
+}
+
+.m-b-12{
+    margin-bottom: -12px;
+}
+.big{
+    font-size: 240%;
+    max-width: 100%;
+    position: absolute;
+}
+
+@media (min-width: 768px) {
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: -15px;
+        margin-top: -6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand{
+        max-width: 80%;
+        padding-top: 15px;
+    }
+
+    .navbar-inverse .navbar-toggle {
+        border: none;
+    }
+}
+
+.no-padding{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/*.navbar-header .navbar-brand {*/
+    /*padding-left: 55px;*/
+    /*background-image: url('../images/dws-logo.png');*/
+    /*background-size: auto 70%;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 7px 50%;*/
+    /*transition: color 0.2s ease 0.05s;*/
+    /*color: #ccc;*/
+/*}*/

@@ -8,15 +8,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ 'home'|page }}">Dummwiestroh</a>
+            <a class="navbar-brand" href="{{ 'home'|page }}">
+                <div class="m-b-12"><small>Daniel Opitz <span class="black">Benjamin Hasenclever</span></small></div> <br>
+                <p class="big"><span class="black">Pirat</span> Dummwiestroh</p>
+            </a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Buch</a></li>
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Charaktere</a></li>
-                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">Über uns</a></li>
-                <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Feedback</a></li>
+                <li class="{% if this.page.id == 'buch' %}active{% endif %}"><a href="{{ 'buch'|page }}">Buch</a></li>
+                <li class="{% if this.page.id == 'charaktere' %}active{% endif %}"><a href="{{ 'charaktere'|page }}">Charaktere</a></li>
+                <li class="{% if this.page.id == 'ueber-uns' %}active{% endif %}"><a href="{{ 'uber-uns'|page }}">Über uns</a></li>
+                <li class="{% if this.page.id == 'feedback' %}active{% endif %}"><a href="{{ 'feedback'|page }}">Feedback</a></li>
             </ul>
         </div>
     </div>
