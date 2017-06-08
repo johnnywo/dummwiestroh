@@ -22,6 +22,38 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-size: 130%;
 }
 
+.content-container{
+    margin-bottom: 80px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.footer{
+    margin-top: 10px;
+    background: url("/themes/dws/assets/images/menu-hg.png");
+    color: whitesmoke;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Amatica SC', cursive;
+}
+
+.footer .container p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.charakter{
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+}
+
 .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after, .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
     background: #e6e6e6;
 }
@@ -77,3 +109,31 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     /*transition: color 0.2s ease 0.05s;*/
     /*color: #ccc;*/
 /*}*/
+
+.pt-10{
+    padding-top: 10px;
+}
+
+.blue{
+    background-color: #4FBECD;
+    color: white;
+}
+
+.red{
+    background-color: #CD584F;
+    color: white;
+}
+
+.green{
+    background-color: #4FCD78;
+    color: white;
+}
+
+.beige{
+    background-color: #CDC14F;
+    color: white;
+}
+
+.row.last{
+    margin-bottom: 80px;
+}
