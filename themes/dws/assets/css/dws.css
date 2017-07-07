@@ -214,7 +214,7 @@ input.form-control, textarea.form-control{
 
 @media (min-width: 769px) {
     body{
-        background: url("/themes/dws/assets/images/bg-karte-blur-2048x.jpg") center center no-repeat;
+        background: url("/themes/dws/assets/images/hg-dws.jpg") center center no-repeat;
         background-size: cover;
         background-attachment: fixed;
     }
@@ -309,3 +309,7 @@ input.form-control, textarea.form-control{
     background-color: inherit;
 }
 
+.jumbotron h1, .jumbotron .h1 {
+    color: #4a4a4a;
+    font-weight: normal;
+}
