@@ -305,3 +305,7 @@ input.form-control, textarea.form-control{
     }
 }
 
+.jumbotron.transparent{
+    background-color: inherit;
+}
+
