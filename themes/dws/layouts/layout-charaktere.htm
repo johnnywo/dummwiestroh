@@ -27,14 +27,17 @@ description = "Charaktere Layout Static Pages"
         </header>
 
         <!-- Content -->
-        <section id="layout-content" class="bg-schatzkarte">
-            <div class="row">
-                <div class="text-center">
-                    <h1>{{ this.page.title }}</h1>
-                </div>
-            </div>
-            {% page %}
+        <section id="layout-content">
+
             <div class="container content-container charaktere">
+                {% page %}
+                <div class="row">
+                    <div class="text-center">
+                        <h1>{{ this.page.title }}</h1>
+                    </div>
+                </div>
+
+
                 <div class="row">
                     <div class="col-xs-5 col-sm-2 col-sm-offset-2">
                         <img src="{{ 'assets/images/charaktere/Dummwiestroh.png'|theme }}" alt="Pirat Dummwiestroh"

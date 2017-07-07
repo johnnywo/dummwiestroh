@@ -7,6 +7,13 @@ body{
     -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+    background: url("/themes/dws/assets/images/hg-dws.jpg") center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Amatica SC', cursive;
     font-weight: bold;
@@ -213,11 +220,6 @@ input.form-control, textarea.form-control{
 }
 
 @media (min-width: 769px) {
-    body{
-        background: url("/themes/dws/assets/images/hg-dws.jpg") center center no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
 
     ul.nav.navbar-nav{
         padding-left: 410px;
@@ -251,12 +253,7 @@ input.form-control, textarea.form-control{
 }
 
 @media (max-width: 768px) {
-    .bg-schatzkarte{
-        background: url("/themes/dws/assets/images/bg-karte-blur.jpg") top center repeat;
-        background-size: 100%;
-        background-attachment: initial;
-        padding-bottom: 20px;
-    }
+
     .navbar-brand{
         max-width: 80%;
         padding-top: 15px;
@@ -307,9 +304,15 @@ input.form-control, textarea.form-control{
 
 .jumbotron.transparent{
     background-color: inherit;
+    padding-top: 0;
 }
 
 .jumbotron h1, .jumbotron .h1 {
     color: #4a4a4a;
     font-weight: normal;
+    font-size: 350%;
+}
+
+body.maintenance{
+    padding-top: 0;
 }
