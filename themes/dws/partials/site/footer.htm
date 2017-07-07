@@ -1,7 +1,21 @@
 <div id="footer" class="footer">
     <div class="container">
         <div class="charakter">
-            <img src="/themes/dws/assets/images/Krummsaebel.png" alt="Krummsäbel an Start.">
+            {% if this.page.id == 'home' %}
+                <img src="/themes/dws/assets/images/Krummsaebel.png" alt="Krummsäbel an Start.">
+            {% endif %}
+            {% if this.page.id == 'buch' %}
+                <img src="/themes/dws/assets/images/Dummwiestroh-rund.png" alt="Krummsäbel an Start.">
+            {% endif %}
+            {% if this.page.id == 'charaktere' %}
+                <img src="/themes/dws/assets/images/Emil.png" alt="Krummsäbel an Start.">
+            {% endif %}
+            {% if this.page.id == 'team' %}
+                <img src="/themes/dws/assets/images/Henry.png" alt="Krummsäbel an Start.">
+            {% endif %}
+            {% if this.page.id == 'feedback' %}
+                <img src="/themes/dws/assets/images/Andreana.png" alt="Krummsäbel an Start.">
+            {% endif %}
         </div>
         <p class="muted credit">&copy; {{ "now"|date("Y") }} Daniel Opitz & Benji.</p>
     </div>

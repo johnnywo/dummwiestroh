@@ -1,23 +1,29 @@
 body{
     font-family: 'Schoolbell', cursive;
-    font-size: 170%;
-    padding-top: 110px;
+    font-size: 160%;
+    padding-top: 78.5px;
+    color: #404040;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Amatica SC', cursive;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 1.1;
 }
 
+h1{
+    text-align: center;
+}
+
 .navbar{
-    min-height: 110px;
+    min-height: 70px;
+    border-bottom: 8.5px solid white;
 }
 
 .navbar-inverse {
     background: url("/themes/dws/assets/images/menu-hg.png");
-
-    border: none;
     font-family: 'Schoolbell', cursive;
     font-size: 130%;
 }
@@ -41,6 +47,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     left: 0;
     right: 0;
     font-family: 'Amatica SC', cursive;
+    border-top: 8.5px solid white;
 }
 
 .footer .container p{
@@ -51,7 +58,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .charakter{
     position: absolute;
     right: 20px;
-    bottom: 25px;
+    bottom: 15px;
 }
 
 .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after, .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
@@ -61,54 +68,69 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .navbar-brand{
     font-family: 'Amatica SC', cursive;
     color: rgb(235, 235, 235) !important;
-    height: 110px;
+    height: inherit;
+}
+
+
+a.navbar-brand-big:hover{
+    text-decoration: none;
+}
+
+ul.nav.navbar-nav {
+    margin-top: 0;
+    font-family: 'Amatica SC', cursive;
+    color: rgb(245, 245, 245) !important;
+    height: inherit;
+    font-weight: bold;
+    font-size: 140%;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #474747;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #b65151;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: inherit;
+}
+
+.navbar-autohide.is-hidden {
+    transform: translateY(-116px);
 }
 
 .black{
     color: rgb(62, 62, 62);
 }
 
-.m-b-12{
-    margin-bottom: -12px;
-}
 .big{
-    font-size: 240%;
+    font-size: 155%;
     max-width: 100%;
-    position: absolute;
 }
 
-@media (min-width: 768px) {
-    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-        margin-left: -15px;
-        margin-top: -6px;
-    }
-}
 
-@media (max-width: 768px) {
-    .navbar-brand{
-        max-width: 80%;
-        padding-top: 15px;
-    }
 
-    .navbar-inverse .navbar-toggle {
-        border: none;
-    }
-}
+
 
 .no-padding{
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
-/*.navbar-header .navbar-brand {*/
-    /*padding-left: 55px;*/
-    /*background-image: url('../images/dws-logo.png');*/
-    /*background-size: auto 70%;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: 7px 50%;*/
-    /*transition: color 0.2s ease 0.05s;*/
-    /*color: #ccc;*/
-/*}*/
+.navbar-header .navbar-brand {
+    padding-left: 246px;
+    background-image: url(../images/header/logo-dws.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 7px 50%;
+    transition: color 0.2s ease 0.05s;
+    color: #ccc;
+    position: absolute;
+    height: 150px;
+}
 
 .pt-10{
     padding-top: 10px;
@@ -134,6 +156,152 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: white;
 }
 
+.inblack{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    /*text-align: right;*/
+}
+
 .row.last{
     margin-bottom: 80px;
 }
+
+.buch-kaufen{
+    background-image: url("/themes/dws/assets/images/Button-Buch-kaufen.png");
+    width: 100%;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    background-position: center center;
+}
+.button-absenden{
+    background-image: url("/themes/dws/assets/images/Button-Absenden.png");
+    width: 100%;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    background-position: left center;
+}
+
+
+input.form-control, textarea.form-control{
+    background: rgba(255,255,255,0.6);
+    border-color: #272727;
+}
+/*.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 30px;
+    padding-right: 30px;
+}*/
+
+.image-florian{
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+
+.image-benji {
+    position: absolute;
+    left: 20px;
+    top: 360px;
+}
+
+.team h2{
+    font-size: 25px;
+}
+
+@media (min-width: 769px) {
+    body{
+        background: url("/themes/dws/assets/images/bg-karte-blur-2048x.jpg") center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    ul.nav.navbar-nav{
+        padding-left: 410px;
+    }
+
+    ul.nav li.separator{
+        display: none;
+    }
+
+    .navbar-header .navbar-brand {
+        line-height: 1.1;
+        padding-top: 10.5px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        margin-top: -3px;
+        padding-bottom: 25px;
+    }
+
+    .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after, .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
+        background: #393939;
+    }
+
+    .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:after {
+        bottom: 1px;
+    }
+
+
+
+
+}
+
+@media (max-width: 768px) {
+    .bg-schatzkarte{
+        background: url("/themes/dws/assets/images/bg-karte-blur.jpg") top center repeat;
+        background-size: 100%;
+        background-attachment: initial;
+        padding-bottom: 20px;
+    }
+    .navbar-brand{
+        max-width: 80%;
+        padding-top: 15px;
+    }
+
+    .navbar-header .navbar-brand {
+        padding-left: 168px;
+        background-image: url(../images/header/logo-dws.png);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: 7px top;
+        transition: color 0.2s ease 0.05s;
+        color: #ccc;
+        position: absolute;
+        height: 98px;
+        font-size: 15.5px;
+        font-weight:bold;
+        line-height: 1.1;
+        z-index:9999;
+    }
+
+    .nav > li.first > a {
+        margin-top: 40px;
+    }
+
+    .navbar-brand-big{
+        display: inline-block;
+        margin-top: -12px;
+        line-height: 0.8;
+        margin-left: 12px;
+        padding-bottom: 20px;
+    }
+
+    a.navbar-brand-big{
+        color: white;
+    }
+
+    .navbar-inverse .navbar-toggle {
+        border: none;
+    }
+
+
+    .extra-padding-col{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+

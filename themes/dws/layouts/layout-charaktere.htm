@@ -1,0 +1,201 @@
+description = "Charaktere Layout Static Pages"
+
+[staticPage]
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dummwiestroh - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Florian Opitz">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Schoolbell" rel="stylesheet">
+        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/dws.css'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content" class="bg-schatzkarte">
+            <div class="row">
+                <div class="text-center">
+                    <h1>{{ this.page.title }}</h1>
+                </div>
+            </div>
+            {% page %}
+            <div class="container content-container charaktere">
+                <div class="row">
+                    <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                        <img src="{{ 'assets/images/charaktere/Dummwiestroh.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                    <div class="col-xs-7 col-sm-6">
+                        <br>
+                        {% placeholder DWS %}
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-xs-7 col-sm-6 col-sm-offset-2">
+                        {% placeholder Rotbart %}
+                    </div>
+                    <div class="col-xs-5 col-sm-2">
+                        <img src="{{ 'assets/images/charaktere/Rotbart-fuss%20.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                        <img src="{{ 'assets/images/charaktere/semmelknoedel.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                    <div class="col-xs-7 col-sm-6">
+                        {% placeholder Semmelknoedel title="Semmelknödel" %}
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-xs-7 col-sm-6 col-sm-offset-2">
+                        {% placeholder Krummsaebel title="Krummsäbel" %}
+                    </div>
+                    <div class="col-xs-5 col-sm-2">
+                        <img src="{{ 'assets/images/charaktere/Krummsaebel.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <br>
+                    <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                        <img src="{{ 'assets/images/charaktere/Rumbert-der-Baer.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                    <div class="col-xs-7 col-sm-6">
+                        {% placeholder Rumbert %}
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-xs-7 col-sm-6 col-sm-offset-2">
+                        {% placeholder Harry %}
+                    </div>
+                    <div class="col-xs-5 col-sm-2">
+                        <img src="{{ 'assets/images/charaktere/Der-verrueckte-Harry.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <br>
+                    <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                        <img src="{{ 'assets/images/charaktere/Andreana.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                    <div class="col-xs-7 col-sm-6">
+                        {% placeholder Adreana %}
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-xs-7 col-sm-6 col-sm-offset-2">
+                        {% placeholder Helene %}
+                    </div>
+                    <div class="col-xs-5 col-sm-2">
+                        <img src="{{ 'assets/images/charaktere/Helena-Milf.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <br>
+                    <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                        <img src="{{ 'assets/images/charaktere/Emil-Adlerauge-2.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                    <div class="col-xs-7 col-sm-6">
+                        {% placeholder Emil %}
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-xs-7 col-sm-6 col-sm-offset-2">
+                        {% placeholder Gerlinde %}
+                    </div>
+                    <div class="col-xs-5 col-sm-2">
+                        <img src="{{ 'assets/images/charaktere/Brumhilde.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <br>
+                    <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                        <img src="{{ 'assets/images/charaktere/Ironimus-Lenkrad.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                    <div class="col-xs-7 col-sm-6">
+                        {% placeholder Ironimus %}
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-xs-7 col-sm-6 col-sm-offset-2">
+                        {% placeholder Willi %}
+                    </div>
+                    <div class="col-xs-5 col-sm-2">
+                        <img src="{{ 'assets/images/charaktere/Lord-Faggot.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <br>
+                    <div class="col-xs-5 col-sm-2 col-sm-offset-2">
+                        <img src="{{ 'assets/images/charaktere/Hannibal-Locke.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                    <div class="col-xs-7 col-sm-6">
+                        {% placeholder Hannibal %}
+                    </div>
+                </div>
+                <div class="row">
+                    <br>
+                    <div class="col-xs-7 col-sm-6 col-sm-offset-2">
+                        {% placeholder Antonio %}
+                    </div>
+                    <div class="col-xs-5 col-sm-2">
+                        <img src="{{ 'assets/images/charaktere/Antonio-Fidelio.png'|theme }}" alt="Pirat Dummwiestroh"
+                             title="Pirat Dummwiestroh" class="img-responsive">
+                    </div>
+                </div>
+
+            </div> <!-- Container Charaktere End -->
+
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

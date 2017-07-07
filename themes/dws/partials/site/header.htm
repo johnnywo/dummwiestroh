@@ -8,18 +8,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            {#<a href="{{ 'home'|page }}" class="navbar-brand"></a>#}
             <a class="navbar-brand" href="{{ 'home'|page }}">
-                <div class="m-b-12"><small>Daniel Opitz <span class="black">Benjamin Hasenclever</span></small></div> <br>
-                <p class="big"><span class="black">Pirat</span> Dummwiestroh</p>
+                <small>Daniel Opitz <br>
+                <span class="black">Benjamin Hasenclever</span></small>
             </a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav">
-                <li class="separator hidden-xs"></li>
-                <li class="{% if this.page.id == 'buch' %}active{% endif %}"><a href="{{ 'buch'|page }}">Buch</a></li>
-                <li class="{% if this.page.id == 'charaktere' %}active{% endif %}"><a href="{{ 'charaktere'|page }}">Charaktere</a></li>
-                <li class="{% if this.page.id == 'ueber-uns' %}active{% endif %}"><a href="{{ 'uber-uns'|page }}">Über uns</a></li>
-                <li class="{% if this.page.id == 'feedback' %}active{% endif %}"><a href="{{ 'feedback'|page }}">Feedback</a></li>
+                <li class="{% if this.page.id == 'buch' %}active{% endif %} first"><a href="{{ 'buch'|page }}">Buch</a></li>
+                <li class="{% if this.page.id == 'charaktere' %}active{% endif %}"><a href="{{ 'charaktere'|page }}">Charaktere</a>
+                </li>
+                <li class="{% if this.page.id == 'team' %}active{% endif %}"><a href="{{ 'team'|page }}">Team</a></li>
+                <li class="{% if this.page.id == 'feedback' %}active{% endif %}"><a href="{{ 'feedback'|page }}">Feedback</a>
+                </li>
             </ul>
         </div>
     </div>
