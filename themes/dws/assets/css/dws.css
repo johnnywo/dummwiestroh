@@ -1,6 +1,6 @@
 body{
     font-family: 'Schoolbell', cursive;
-    font-size: 160%;
+    font-size: 180%;
     padding-top: 78.5px;
     color: #404040;
     -webkit-font-smoothing: antialiased;
@@ -36,7 +36,7 @@ h1{
 }
 
 .content-container{
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 
 .vcenter {
@@ -247,6 +247,10 @@ input.form-control, textarea.form-control{
         bottom: 1px;
     }
 
+    .top-margin{
+        margin-top: 50px;
+    }
+
 
 
 
@@ -315,4 +319,10 @@ input.form-control, textarea.form-control{
 
 body.maintenance{
     padding-top: 0;
+}
+
+.star{
+    background-image: url('/themes/dws/assets/images/charaktere/Stern.png');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
