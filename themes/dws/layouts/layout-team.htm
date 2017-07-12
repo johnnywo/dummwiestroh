@@ -1,0 +1,89 @@
+description = "Team Layout Static Pages"
+
+[staticPage]
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dummwiestroh - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="Florian Opitz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+    <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Schoolbell" rel="stylesheet">
+    <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/dws.css'|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+<body>
+
+<!-- Header -->
+<header id="layout-header">
+    {% partial 'site/header' %}
+</header>
+
+<!-- Content -->
+<section id="layout-content">
+
+    <div class="container content-container charaktere top-margin">
+
+        <div class="row">
+
+            <div class="text-center">
+                <h1>{{ this.page.title }}</h1>
+            </div>
+            {#{{ d(page) }}#}
+
+
+            <div class="col-sm-8 col-sm-offset-2">
+                {% page %}
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-7">
+                <img src="{{ 'assets/images/team/daniel.png'|theme }}" alt="Daniel Opitz" class="image-florian">
+            </div>
+            <div class="col-sm-5 col-sm-offset-2">
+                <br>
+                {% placeholder Danielopitz title="Daniel Opitz" %}
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class=" col-sm-offset-2 col-sm-3">
+                <img src="{{ 'assets/images/team/benji.png'|theme }}" alt="Benjamin Hasenclever">
+            </div>
+            <div class="col-sm-5 text-right">
+                {% placeholder Benjaminhasenclever title="Benjamin Hasenclever" %}
+            </div>
+            <br>
+            <br>
+        </div>
+
+
+    </div> <!-- Container Team End -->
+
+</section>
+
+<!-- Footer -->
+<footer id="layout-footer">
+    {% partial 'site/footer' %}
+</footer>
+
+<!-- Scripts -->
+<script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+<script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>

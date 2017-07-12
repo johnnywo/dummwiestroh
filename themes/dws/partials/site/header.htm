@@ -17,9 +17,9 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li class="{% if this.page.id == 'buch' %}active{% endif %} first"><a href="{{ 'buch'|page }}">Buch</a></li>
-                <li class="{% if this.page.id == 'charaktere' %}active{% endif %}"><a href="{{ 'charaktere'|page }}">Charaktere</a>
+                <li class="{% if staticPage.title == 'Charaktere' %}active{% endif %}"><a href="{{ 'charaktere'|staticPage }}">Charaktere</a>
                 </li>
-                <li class="{% if this.page.id == 'team' %}active{% endif %}"><a href="{{ 'team'|page }}">Team</a></li>
+                <li class="{% if staticPage.title == 'Team' %}active{% endif %}"><a href="{{ 'team'|staticPage }}">Team</a></li>
                 <li class="{% if this.page.id == 'feedback' %}active{% endif %}"><a href="{{ 'feedback'|page }}">Feedback</a>
                 </li>
             </ul>

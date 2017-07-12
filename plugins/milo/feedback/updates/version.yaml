@@ -1,3 +1,4 @@
-1.0.1:
-    - First version of Feedback
-    - create_milo_feedbacks_table.php
+1.0.1: First version of Feedback
+1.0.2:
+    - Create DB feedback table
+    - create_feedbacks_table.php

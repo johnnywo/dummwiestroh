@@ -52,7 +52,7 @@ class Plugin extends PluginBase
     {
 
         return [
-            'Milo\Feedback\Components\Feedback' => 'feedBack',
+            'Milo\Feedback\Components\Feedbacks' => 'feedbacks',
         ];
     }
 
@@ -80,12 +80,11 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
 
         return [
             'feedback' => [
                 'label'       => 'Feedback',
-                'url'         => Backend::url('milo/feedback/mycontroller'),
+                'url'         => Backend::url('milo/feedback/feedback'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['milo.feedback.*'],
                 'order'       => 500,
