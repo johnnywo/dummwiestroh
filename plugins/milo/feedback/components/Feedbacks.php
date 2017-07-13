@@ -6,6 +6,7 @@ use Validator;
 use Input;
 use Flash;
 use Redirect;
+use Mail;
 
 class Feedbacks extends ComponentBase
 {
@@ -22,21 +23,29 @@ class Feedbacks extends ComponentBase
         return [];
     }
 
+	public function index()
+	{
+		$entries = Feedback::orderBy('created_at')->get();
+
+		return $entries;
+    }
+
 	public function onSend()
 	{
+		$url = Input::get('url');
 		$validator = Validator::make(
 			[
-				'name' => Input::get('name'),
+				'name'      => Input::get('name'),
 				'email'     => Input::get('email'),
 				'comment'   => Input::get('comment')
 			],
 			[
-				'name' => 'required',
+				'name'      => 'required',
 				'email'     => 'required|email',
 				'comment'   => 'required'
 			],
 			[
-				'name.required' => 'Dein Name wird benötigt.',
+				'name.required'      => 'Dein Name wird benötigt.',
 				'email.required'     => 'Deine korrkete E-Mail Adresse wird benötigt',
 				'comment.required'   => 'Kommentar wird benötigt.'
 			]
@@ -45,38 +54,42 @@ class Feedbacks extends ComponentBase
 
 		if ( $validator->fails() )
 		{
-			throw new \ValidationException($validator);
-		} else
-		{
-			$vars = [
-				'name'  => Input::get('name'),
-				'email'      => Input::get('email'),
-				'comment'    => Input::get('comment')
-			];
+			return Redirect::to('/feedback')->withErrors($validator);
+		} else {
 
-			//var_dump($vars);
+			if (isset($url) && $url == '')
+			{
+				$vars['name']       = Input::get('name');
+				$vars['email']      = Input::get('email');
+				$vars['comment']    = Input::get('comment');
 
-			Feedback::create([
-				'name'  => $vars['name'],
-				'email'      => $vars['email'],
-				'comment'    => $vars['comment']
-			]);
+				Feedback::create([
+					'name'       => $vars['name'],
+					'email'      => $vars['email'],
+					'comment'    => $vars['comment']
+				]);
+
+				/* @todo: Configure Mail Send after submitting new Comment
+				already created views/mail/message.htm*/
+				Mail::send('milo.feedback::mail.message', $vars, function($message) {
+
+					$message->from(Input::get('email'), Input::get('name'));
+					$message->to('office@zeero.at', 'Dummwiestroh Manager');
+					$message->cc('emil@zeero.at', 'Emil');
+					$message->subject('neues Feedback dummwiestroh.at');
+
+				});
+
+				Flash::success('Kommentar wurde übermittelt!');
+
+				return Redirect::back();
+
+			}
 
 
-			/* @todo: Configure Mail Send after submitting new Comment
-			already created views/mail/message.htm*/
-			/*			Mail::send('milo.receipt::mail.message', $vars, function($message) {
 
-							$message->from('office@mollydarcys.at', 'Molly Darcys Irish Pub');
-							$message->to('office@mollydarcys.at', 'Molly Darcys Irish Pub');
-							$message->cc(Input::get('email'), Input::get('name'));
-							$message->subject('autoreply: your Reservation request');
-
-						});*/
-
-			Flash::success('Kommentar wurde übermittelt!');
-
-			return Redirect::back();
+			Flash::error('Humans only.');
+			return Redirect::to('/');
 		}
 	}
 

@@ -18,16 +18,15 @@ layout = "default"
             <div class="row">
 
                 <div class="col-sm-4 col-sm-push-4">
-                    <div class="small"><i>Rudi, 20. Juni 2017</i></div>
-                    <p>Hammer Buch haha, kann es nur weiterempfehlen!!!</p>
-                    <br>
-                    <div class="small"><i>Rottraud, 19. Juni 2017</i></div>
-                    <p>Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Donec sollicitudin molestie
-                        malesuada.</p>
-                    <br>
-                    <div class="small"><i>Notburga, 18. Juni 2017</i></div>
-                    <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan
-                        tincidunt.</p>
+                    {% if feedbacks.index.count > 0 %}
+                        {% for entry in feedbacks.index %}
+                            <div class="small"><i>{{ entry.name }}, {{ entry.created_at|date("d.m.Y") }}</i></div>
+                            <p>{{ entry.comment }}</p>
+                            <br>
+                        {% endfor %}
+                    {% else %}
+                        <p>Sei der erste, der sein Feedback abgibt!</p>
+                    {% endif %}
                 </div>
 
                 <div class="col-sm-4 col-sm-pull-4">
@@ -39,6 +38,9 @@ layout = "default"
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail">
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" id="url" name="url" placeholder="URL">
                         </div>
                         <textarea class="form-control" rows="5" name="comment"
                                   placeholder="Schreib uns was ..."></textarea>
