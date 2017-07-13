@@ -251,12 +251,49 @@ input.form-control, textarea.form-control{
         margin-top: 50px;
     }
 
-
-
-
 }
 
-@media (max-width: 768px) {
+@media (width: 768px) {
+    ul.nav.navbar-nav{
+        padding-left: 410px;
+    }
+
+    ul.nav.navbar-nav {
+        font-size: 80%;
+    }
+
+    .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after, .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
+        background: #393939;
+    }
+
+    .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:after {
+        bottom: 1px;
+    }
+
+    .top-margin{
+        margin-top: 50px;
+    }
+
+    .navbar-brand {
+        float: left;
+        padding-top: 8.5px;
+        padding-right: 15px;
+        padding-bottom: 22.5px;
+        padding-left: 15px;
+        font-size: 20px;
+        line-height: 25px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    body{
+        background: url("/themes/dws/assets/images/bg-karte-blur.jpg") top center repeat;
+        background-size: 100%;
+        background-attachment: initial;
+        padding-bottom: 20px;
+    }
 
     .navbar-brand{
         max-width: 80%;
@@ -283,7 +320,7 @@ input.form-control, textarea.form-control{
         margin-top: 40px;
     }
 
-    .navbar-brand-big{
+/*    .navbar-brand-big{
         display: inline-block;
         margin-top: -12px;
         line-height: 0.8;
@@ -293,7 +330,7 @@ input.form-control, textarea.form-control{
 
     a.navbar-brand-big{
         color: white;
-    }
+    }*/
 
     .navbar-inverse .navbar-toggle {
         border: none;
