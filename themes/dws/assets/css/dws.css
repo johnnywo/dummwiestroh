@@ -268,7 +268,7 @@ input.form-control, textarea.form-control{
     }
 
     ul.nav.navbar-nav {
-        font-size: 75%;
+        font-size: 70%;
     }
 
     .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after, .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
