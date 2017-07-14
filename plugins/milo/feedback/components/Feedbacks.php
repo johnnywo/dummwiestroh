@@ -25,7 +25,7 @@ class Feedbacks extends ComponentBase
 
 	public function index()
 	{
-		$entries = Feedback::orderBy('created_at')->get();
+		$entries = Feedback::orderBy('created_at', 'DESC')->get();
 
 		return $entries;
     }
