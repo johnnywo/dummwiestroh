@@ -5,4 +5,12 @@
 columns:
     id:
         label: ID
+    name:
+        label: Name
+        searchable: true
+    email:
+        label: E-Mail
+        searchable: true
+    comment:
+        label: Feedback
         searchable: true

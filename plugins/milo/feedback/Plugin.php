@@ -84,7 +84,7 @@ class Plugin extends PluginBase
         return [
             'feedback' => [
                 'label'       => 'Feedback',
-                'url'         => Backend::url('milo/feedback/feedback'),
+                'url'         => Backend::url('milo/feedback/feedbacks'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['milo.feedback.*'],
                 'order'       => 500,
