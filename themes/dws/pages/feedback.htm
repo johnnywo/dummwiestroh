@@ -13,11 +13,11 @@ layout = "default"
 
     <div class="row">
 
-        <div class="col-sm-12 col-sm-offset-2">
+        <div class="col-sm-12 col-sm-offset-1 col-md-12 col-md-offset-2 star">
 
             <div class="row">
 
-                <div class="col-sm-4 col-sm-push-4">
+                <div class="col-sm-5 col-sm-push-5 col-md-4 col-md-push-4">
                     {% if feedbacks.index.count > 0 %}
                         {% for entry in feedbacks.index %}
                             <div class="small"><i>{{ entry.name }}, {{ entry.created_at|date("d.m.Y") }}</i></div>
@@ -29,7 +29,7 @@ layout = "default"
                     {% endif %}
                 </div>
 
-                <div class="col-sm-4 col-sm-pull-4">
+                <div class="col-sm-5 col-sm-pull-5 col-md-4 col-md-pull-4">
                     <form data-request="onSend"
                           data-request-validate
                           data-request-flash>
