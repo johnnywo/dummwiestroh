@@ -215,13 +215,14 @@ input.form-control, textarea.form-control{
     font-size: 25px;
 }
 
-@media (min-width: 769px) {
+body{
+    background: url("/themes/dws/assets/images/bg-karte-blur-1024.jpg") top center repeat;
+    background-size: 100%;
+    background-attachment: initial;
+    padding-bottom: 20px;
+}
 
-    body{
-        background: url("/themes/dws/assets/images/hg-dws.jpg") center center no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
+@media (min-width: 769px) {
 
     ul.nav.navbar-nav{
         padding-left: 410px;
@@ -256,12 +257,6 @@ input.form-control, textarea.form-control{
 }
 
 @media (width: 768px) {
-
-    body{
-        background: url("/themes/dws/assets/images/hg-dws.jpg") center center no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
 
     ul.nav.navbar-nav{
         padding-left: 410px;
