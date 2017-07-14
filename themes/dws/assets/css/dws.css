@@ -7,11 +7,7 @@ body{
     -moz-osx-font-smoothing: grayscale;
 }
 
-body{
-    background: url("/themes/dws/assets/images/hg-dws.jpg") center center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
+
 
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -221,6 +217,12 @@ input.form-control, textarea.form-control{
 
 @media (min-width: 769px) {
 
+    body{
+        background: url("/themes/dws/assets/images/hg-dws.jpg") center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
     ul.nav.navbar-nav{
         padding-left: 410px;
     }
@@ -254,12 +256,19 @@ input.form-control, textarea.form-control{
 }
 
 @media (width: 768px) {
+
+    body{
+        background: url("/themes/dws/assets/images/hg-dws.jpg") center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
     ul.nav.navbar-nav{
         padding-left: 410px;
     }
 
     ul.nav.navbar-nav {
-        font-size: 80%;
+        font-size: 75%;
     }
 
     .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after, .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {

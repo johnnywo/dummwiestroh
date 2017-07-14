@@ -11,13 +11,10 @@ layout = "default"
         </div>
     </div>
 
-    <div class="row">
+    <div class="row star">
 
-        <div class="col-sm-12 col-sm-offset-1 col-md-12 col-md-offset-2 star">
 
-            <div class="row">
-
-                <div class="col-sm-5 col-sm-push-5 col-md-4 col-md-push-4">
+                <div class="col-sm-5 col-sm-push-5 col-sm-offset-1 col-md-4 col-md-push-4 col-md-offset-2">
                     {% if feedbacks.index.count > 0 %}
                         {% for entry in feedbacks.index %}
                             <div class="small"><i>{{ entry.name }}, {{ entry.created_at|date("d.m.Y") }}</i></div>
@@ -47,8 +44,6 @@ layout = "default"
                         <button type="submit" class="text-hide button-absenden">Submit</button>
                     </form>
                 </div>
-            </div>
-        </div>
 
 
     </div>
