@@ -73,8 +73,8 @@ class Feedbacks extends ComponentBase
 				already created views/mail/message.htm*/
 				Mail::send('milo.feedback::mail.message', $vars, function($message) {
 					$message->from(Input::get('email'), Input::get('name'));
-					$message->to('office@zeero.at', 'Dummwiestroh Manager');
-					$message->cc('emil@zeero.at', 'Emil');
+					$message->to('daniel@dummwiestroh.at', 'Daniel Opitz');
+					$message->bcc('emil@zeero.at', 'Emil');
 					$message->subject('neues Feedback dummwiestroh.at');
 				});
 
