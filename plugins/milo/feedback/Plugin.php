@@ -91,4 +91,12 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+	public function registerMailTemplates()
+	{
+		return [
+			'milo.feedback::mail.message' => 'Notification Mail for Feedback Form.',
+		];
+	}
+
 }

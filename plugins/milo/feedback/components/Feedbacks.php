@@ -72,12 +72,10 @@ class Feedbacks extends ComponentBase
 				/* @todo: Configure Mail Send after submitting new Comment
 				already created views/mail/message.htm*/
 				Mail::send('milo.feedback::mail.message', $vars, function($message) {
-
 					$message->from(Input::get('email'), Input::get('name'));
 					$message->to('office@zeero.at', 'Dummwiestroh Manager');
 					$message->cc('emil@zeero.at', 'Emil');
 					$message->subject('neues Feedback dummwiestroh.at');
-
 				});
 
 				Flash::success('Kommentar wurde übermittelt!');
